@@ -1,6 +1,6 @@
 package library;
 
-class Person {
+class Person implements IDgen{
 	int ID;
 	private String firstName;
 	private String lastName;
@@ -38,6 +38,12 @@ class Person {
 
 	void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+	@Override
+	public void ID_generator() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

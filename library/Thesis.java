@@ -40,4 +40,13 @@ public class Thesis extends Record {
 
 	}
 
+	@Override
+	public void ID_generator() {
+		if (this.ID == 0) {
+         	int id = currentLibrary.getNoRecords();	
+         	this.ID = id + 1;
+         	currentLibrary.setNoRecords(this.ID);
+	    } else { System.out.println("This thesis already has an ID"); }
+	}
+
 }

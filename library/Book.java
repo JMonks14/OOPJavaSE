@@ -11,7 +11,6 @@ class Book extends Record{
 		super();
 	}
 
-
 	Book(String name, String author, String publisher, int edition) {
 		super();
 		this.name=name;
@@ -55,5 +54,17 @@ class Book extends Record{
 		String[] catEntry= {Integer.toBinaryString(ID),name, Integer.toString(edition), author, publisher};
 		System.out.println(catEntry);
 	}
+
+
+	@Override
+	public void ID_generator() {
+		if (this.ID == 0) {
+         	int id = currentLibrary.getNoRecords();	
+         	this.ID = id + 1;
+         	currentLibrary.setNoRecords(this.ID);
+	    } else { System.out.println("This book already has an ID"); }
+    }
+         
+	
 
 }

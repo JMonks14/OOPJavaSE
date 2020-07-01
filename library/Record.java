@@ -1,6 +1,6 @@
 package library;
 
-public abstract class Record {
+public abstract class Record extends Library implements IDgen{
 	
 	String name;
 	int ID;
@@ -18,6 +18,7 @@ public abstract class Record {
 	void setID(int iD) {
 		ID = iD;
 	}
+	
 	String getCurrentBorrowerID() {
 		if (currentBorrowerID > 0) {
 		    return Integer.toString(currentBorrowerID);
@@ -32,4 +33,6 @@ public abstract class Record {
 		this.currentBorrowerID=0;
 	}
 	abstract void catalog();
+	
+	
 }
