@@ -26,7 +26,8 @@ public class garage {
 		fixVehicle(redlorry);
 //		System.out.println((vehicles.size()-1));
 //		System.out.println(vehicles;
-//		dispCost(vehicles);
+//		clearGarage();
+		dispCost(vehicles);
 //		System.out.println(car1.getType());
 		
 	}
@@ -112,6 +113,10 @@ public class garage {
 		int index = vehicles.indexOf(v);
 		int cost = ((vehicles.get(index)).noWheels)*4;
 		System.out.println(cost);
+	}
+	
+	public static void clearGarage() {
+		vehicles.clear();
 	}
 	
 
