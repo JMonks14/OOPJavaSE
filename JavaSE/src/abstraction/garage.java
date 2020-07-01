@@ -21,8 +21,9 @@ public class garage {
 		vehicles.add(redlorry);
 		addLorry(yellowlorry);
 //		removeVehicle(redlorry);
-		
-		removeCars(vehicles);
+//		vehicles.remove(car1);
+		removeLorries(vehicles);
+//		System.out.println((vehicles.size()-1));
 //		System.out.println(vehicles;
 		dispCost(vehicles);
 //		System.out.println(car1.getType());
@@ -60,22 +61,51 @@ public class garage {
 	}
 	
 	public static void removeCars(ArrayList<vehicle> vehicles) {
-		for (vehicle v: vehicles) {
-			if (v instanceof car) 
-				System.out.println(v.colour);
+//		for (int i = 0; i <=vehicles.size()-1; i++) {
+//			if (vehicles.get(i) instanceof car) {
+////				vehicles.remove(i);
+//				System.out.println(vehicles.get(i));
+//				i=0;
+		int i=0;
+		while (i < vehicles.size()) {
+			if (vehicles.get(i) instanceof car) {
+				vehicles.remove(i);
+				i=0;
+			} else {
+				i+=1;
+			}
 		}
 	}
-	public static void removeMotorcycles() {
-		for (int i = 0; i>=vehicles.size(); i++) {
-		if (vehicles.get(i) instanceof motorcycle) 
-			vehicles.remove(i);
+	public static void removeMotorcycles(ArrayList<vehicle> vehicles) {
+//		for (int i = 0; i>=vehicles.size(); i++) {
+//		if (vehicles.get(i) instanceof motorcycle) 
+//			vehicles.remove(i);
+//			}
+//		}
+		int i=0;
+		while (i < vehicles.size()) {
+			if (vehicles.get(i) instanceof motorcycle) {
+				vehicles.remove(i);
+				i=0;
+			} else {
+				i+=1;
 			}
 		}
-	public static void removelorries() {
-			for (int i = 0; i>=vehicles.size(); i++) {
-				if (vehicles.get(i) instanceof lorry) 
-					vehicles.remove(i);
+	}
+	public static void removeLorries(ArrayList<vehicle> vehicles) {
+//			for (int i = 0; i>=vehicles.size(); i++) {
+//				if (vehicles.get(i) instanceof lorry) 
+//					vehicles.remove(i);
+//			}
+		int i=0;
+		while (i < vehicles.size()) {
+			if (vehicles.get(i) instanceof lorry) {
+				vehicles.remove(i);
+				i=0;
+			} else {
+				i+=1;
 			}
+		}
 	}
 	
 	
