@@ -1,11 +1,14 @@
 package library;
 
-public abstract class Record extends Library implements IDgen{
+public abstract class Record implements IDgen{
 	
 	String name;
 	int ID;
 	int currentBorrowerID;
 	
+	Record() {
+		super();
+	}
 	String getName() {
 		return name;
 	}

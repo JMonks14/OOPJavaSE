@@ -1,22 +1,34 @@
 package library;
 
-
+import java.util.ArrayList;
 
 public class Library {
-	private int noRecords;
-	private int noPeople;	
-	Library currentLibrary;
+	private int noRecords=1;
+	private int noPeople;		
+	ArrayList<Record> libCont = new ArrayList<Record>();
+	
+	void addThesis(Thesis t) {
+		libCont.add(t);
+		t.setID(noRecords);
+		noRecords++;
+	}
+	
+	void addBook(Book b) {
+		libCont.add(b);
+		b.setID(noRecords);
+		noRecords++;
+	}
+	
+	void addMagazinek(Magazine m) {
+		libCont.add(m);
+		m.setID(noRecords);
+		noRecords++;
+	}
 	
 	Library() {
 		super();
 	}
-	Library getCurrentLibrary() {
-		return currentLibrary;
-	}
-	void setCurrentLibrary(Library currentLibrary) {
-		this.currentLibrary = currentLibrary;
-	}
-
+	
 	int getNoRecords() {
 		return noRecords;
 	}

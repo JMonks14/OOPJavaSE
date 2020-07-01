@@ -41,7 +41,7 @@ class Person implements IDgen{
 	}
 
 	@Override
-	public void ID_generator() {
+//	public void ID_generator() {
 		// TODO Auto-generated method stub
 		
 	}
