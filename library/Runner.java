@@ -4,9 +4,11 @@ public class Runner {
 
 	public static void main(String[] args) {
 		Library myLibrary= new Library();
-		myLibrary.setCurrentLibrary(myLibrary);
-		Thesis thesis1 = new Thesis("OPV", "yours truly", "UoN");
-		System.out.println(thesis1.getCurrentLibrary());
+		Thesis t1= new Thesis("OPV", "Yo", "UoN");
+		myLibrary.addThesis(t1);
+		System.out.println(t1.getID());
+		
+		
 
 	}
 
