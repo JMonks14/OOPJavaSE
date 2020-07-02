@@ -1,5 +1,9 @@
 package JavaSE.src.abstraction;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.*;
+import java.util.List;
+import java.util.Arrays;
 
 public class garage {
 	
@@ -12,8 +16,10 @@ public class garage {
 
 	public  static void main(String[] args) {
 		
-		car car1 = new car(4, 1000, "Blue", "Petrol", "Ford");
+		car car1 = new car("Oliver", 4, 1000, "Blue", "Petrol", "Ford");
+		car car2 = new car("Dave", 4, 1000, "Blue", "Petrol", "Ford");
 		vehicles.add(car1);
+		vehicles.add(car2);
 		motorcycle bike1 = new motorcycle(2, 250, "red", 5, false);
 		vehicles.add(bike1);
 		lorry redlorry = new lorry(8, 6000, "red", "cruise missiles", "Mercedes");
@@ -23,12 +29,13 @@ public class garage {
 //		removeVehicle(redlorry);
 //		vehicles.remove(car1);
 //		removeLorries(vehicles);
-		fixVehicle(redlorry);
-//		System.out.println((vehicles.size()-1));
-//		System.out.println(vehicles;
-//		clearGarage();
-		dispCost(vehicles);
+//		fixVehicle(redlorry);
+////		System.out.println((vehicles.size()-1));
+////		System.out.println(vehicles;
+////		clearGarage();
+//		dispCost(vehicles);
 //		System.out.println(car1.getType());
+		printCars(vehicles);
 		
 	}
 	
@@ -117,6 +124,15 @@ public class garage {
 	
 	public static void clearGarage() {
 		vehicles.clear();
+	}
+	
+	public static void printCars(ArrayList<vehicle> vehicles) {
+		List<vehicle> carsList =
+			vehicles.stream()
+			.filter(v -> v instanceof car)
+			.collect(Collectors.toList());
+		carsList.forEach(v -> System.out.println(v.getName()));
+			
 	}
 	
 

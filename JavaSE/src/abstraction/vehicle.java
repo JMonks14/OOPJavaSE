@@ -2,6 +2,7 @@ package JavaSE.src.abstraction;
 
 public abstract class vehicle{
 	
+	String name;	
 	int noWheels;
 	int weight;
 	String colour;
@@ -12,10 +13,31 @@ public abstract class vehicle{
 		this.weight = weight;
 		this.colour = colour;
 	}
+	
+
+	vehicle(String name, int noWheels, int weight, String colour) {
+		super();
+		this.name = name;
+		this.noWheels = noWheels;
+		this.weight = weight;
+		this.colour = colour;
+	}
+
 
 	vehicle() {
 	
 	}
+	
+
+	String getName() {
+		return name;
+	}
+
+
+	void setName(String name) {
+		this.name = name;
+	}
+
 
 	int getNoWheels() {
 		return noWheels;

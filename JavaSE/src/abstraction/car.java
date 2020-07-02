@@ -7,6 +7,11 @@ public class car extends vehicle{
 	final String type="car";
 	
 	
+	car(String name, int noWheels, int weight, String colour, String fuelType, String brand) {
+		super(name, noWheels, weight, colour);
+		this.fuelType = fuelType;
+		this.brand = brand;
+	}
 	car(int noWheels, int weight, String colour, String fuelType, String brand) {
 		super(noWheels, weight, colour);
 		this.fuelType = fuelType;

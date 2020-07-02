@@ -11,7 +11,8 @@ public class Hello {
 		
 		List<String> names = Arrays.asList("Michael", "Dean", "James", "Chris");
 		names.stream()
-				.forEach(x -> System.out.println("Hello " + x));
+		    .filter(i -> !i.contentEquals("James"))		
+			.forEach(x -> System.out.println("Hello " + x));
 	}
 	
 }

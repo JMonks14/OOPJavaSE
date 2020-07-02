@@ -9,7 +9,7 @@ public class Numbers {
 
 	public static void main(String[] args) {
 		
-		List<Integer> nums = Arrays.asList(9,9,3,2,12);
+		List<Integer> nums = Arrays.asList(9,9,5,2,12,6,2,9,2,7,15,51,15765);
 		
 		List<Integer> max = 
 			nums.stream()
@@ -40,6 +40,7 @@ public class Numbers {
 			.reduce((a,b) -> a+b)
 			.get();
 		System.out.println(sum);
+		
 		List<Integer> minSquareOdd =
 			nums.stream()
 			.filter(i -> i % 2==1)
